@@ -1,0 +1,126 @@
+
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+$font-family-sans-serif-2: 'Poppins', sans-serif;
+$font-family-serif: 'Source Serif Pro', serif;
+
+
+
+body {
+	font-family: $font-family-sans-serif;
+	
+}
+p {
+	color: darken(#ccc, 10%);
+	font-weight: 300;
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $font-family-sans-serif;
+}
+a {
+	transition: .3s all ease;
+	&, &:hover {
+		text-decoration: none!important;
+	}
+}
+.content {
+	padding: 7rem 0;
+}
+h2 {
+	font-size: 20px;
+}
+
+
+
+/* Carousel 4*/
+.testimony-29101 {
+
+  .image {
+    width: 40%;
+    background-size: cover;
+    background-position: center center;
+    @include media-breakpoint-down(md) {
+      height: 300px;
+    }
+  } 
+  .text {
+    width: 60%;
+    padding: 7rem 4rem;
+    background: $light;
+    blockquote {
+      position: relative;
+      padding-bottom: 50px;
+      font-size: 18px;
+      .author {
+        font-size: 14px;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+  .image, .text {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      display: block!important;
+    }
+  }
+}
+
+.slide-one-item {
+  .owl-nav {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $black;
+      span {
+      	font-size: 30px;
+      }
+      &:hover {
+        color: $black;
+      }
+      &:active, &:focus {
+      	outline: none;
+      }
+    }
+    .owl-prev {
+      left: 20px;
+    }
+    .owl-next {
+      right: 20px;
+    }
+  }
+  .owl-dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    .owl-dot {
+      display: inline-block;
+      >span {
+        transition: .3s all cubic-bezier(.32, .71, .53, .53);
+        display: inline-block;
+        width: 15px;
+        height: 3px;
+        // border-radius: 4px;
+        background: rgba($primary, .4);
+        margin: 3px;
+      }
+      &.active {
+        >span {
+          width: 15px;
+          background: $primary;
+        }
+      }
+    }
+  }
+}
